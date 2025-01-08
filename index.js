@@ -27,10 +27,15 @@ const modifiedLetterPart2 = part2.slice(0, -1) + part2.slice(-1).toUpperCase();
 
 const concatenatedString = modifiedLetterPart1 + modifiedLetterPart2;
 console.log(concatenatedString);
-// Print the cameLtaiL-formatted string
-const camelTailpart1 = part1.slice(0, -1) + part1.slice(-1);
 
-const camelTailpart2 = part2.charAt(0).toUpperCase() + part2.slice(1);
+// Print the cameLtaiL-formatted string
+// Capitalize the last letter of part1
+const camelTailpart1 = part1.slice(0, -1) + part1.slice(-1).toUpperCase();
+
+// Convert part2 to lowercase and capitalize the last letter
+const camelTailpart2 =
+  part2.slice(0, -1).toLowerCase() + part2.slice(-1).toUpperCase();
+
 const camelTail = camelTailpart1 + camelTailpart2;
 
 console.log(camelTail);
